@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <!-- <h1>This is Sachin</h1> -->
+  </div>
+
+  <script>
+  //  var h1 = document.createElement('h1')
+  //  console.log(h1)
+  //  h1.textContent = 'This is Sachin'
+  //  var parent = document.getElementById('root')
+  //  parent.appendChild(h1)
+
+  
+  </script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  
+  <script>
+    var h1 = React.createElement('h1', null, 'This is Sachin' )
+    
+    var parent = ReactDOM.createRoot(document.getElementById('root'))
+    parent.render(h1)
+  </script>
+</body>
+</html>
