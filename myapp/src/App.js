@@ -2,7 +2,8 @@ import React from 'react'
 // import HelloClass from './Components/ClassCom/HelloClass'
 // import HelloFun from './Components/FunctionalCom/HelloFun';
 import Jsx from './Components/FunctionalCom/JSX/Jsx'
-import Parent from './Components/FunctionalCom/Props/Parent-Child/Parent';
+import Parent from './Components/FunctionalCom/Props/Child-Child/Parent';
+// import Parent from './Components/FunctionalCom/Props/Child-Parent/Parent';
 
 function App() {
   return (
