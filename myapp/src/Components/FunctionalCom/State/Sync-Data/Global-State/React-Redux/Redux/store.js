@@ -1,35 +1,14 @@
-import { createStore } from 'redux'
 
-export function increaseCount() {
- return {
-    type: 'increase'
-  }
-}
-export function decreaseCount() {
- return {
-    type: 'decrease'
-  }
-}
+import { applyMiddleware, combineReducers, createStore } from 'redux'
+import { countReducer } from './Count/countReducer'
+import { cakeReducer } from './Cake/cakeReducer'
+import logger from 'redux-logger'
 
-var initialState = {
-  count: 0
-}
+var rootReducer = combineReducers({
+  countReducer: countReducer,
+  cakeReducer: cakeReducer
+})
 
-function countReducer(state=initialState, action) {
-  switch (action.type) {
-    case 'increase':
-      return {
-        count: state.count + 1
-      }
-      break;
-    case 'decrease':
-      return {
-        count: state.count - 1
-      }
-      break;
-    default:
-     return state
-  }
-}
 
-export var store = createStore(countReducer)
+export var store = createStore(rootReducer, applyMiddleware(logger))
+console.log(store)
