@@ -1,7 +1,13 @@
 import React from 'react'
-import A from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/A';
-import B from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/B';
-import C from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/C';
+import Parent from './Components/FunctionalCom/Mis-Topics/Portals/Parent';
+// import A from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/A';
+// import B from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/B';
+// import C from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/C';
+// import Inline from './Components/FunctionalCom/Mis-Topics/CSS/Inline-Css/Inline';
+// import External from './Components/FunctionalCom/Mis-Topics/CSS/Style-Sheet/External';
+// import Register from './Components/FunctionalCom/Mis-Topics/CSS/Css-Modules/Register/Register';
+// import Login from './Components/FunctionalCom/Mis-Topics/CSS/Css-Modules/Login/Login';
+// import Parent from './Components/FunctionalCom/Mis-Topics/CSS/Dynamic/Parent';
 // import Table from './Components/FunctionalCom/Performance/Fragment/Table';
 // import A from './Components/FunctionalCom/Performance/Conditional-Rendering/A';
 // import A from './Components/FunctionalCom/Performance/Fragment/A';
@@ -40,9 +46,15 @@ function App() {
       {/* <A/> */}
       {/* <Table/> */}
       {/* <A/> */}
-      <A />
+      {/* <A />
       <B />
-      <C />
+      <C /> */}
+      {/* <Inline/> */}
+      {/* <External/> */}
+      {/* <Register />
+      <Login /> */}
+      {/* <Parent/> */}
+      <Parent/>
     </div>
   );
 }

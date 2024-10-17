@@ -1,0 +1,14 @@
+.btnGreen{
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+}
+.btnRed{
+  background-color:red;
+  color: white;
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+}
