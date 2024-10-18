@@ -4,7 +4,7 @@ import App from './App'
 
 
 var div = document.getElementById('root')
-console.log(div)
+// console.log(div)
 
 var parent = ReactDOM.createRoot(div)
 

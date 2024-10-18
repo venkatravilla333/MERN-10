@@ -1,5 +1,8 @@
 import React from 'react'
 import Parent from './Components/FunctionalCom/Mis-Topics/Portals/Parent';
+import A from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/A';
+import Dom from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/Interact-with-dom/Dom';
+import Refer from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/To-refer-value/Refer';
 // import A from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/A';
 // import B from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/B';
 // import C from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/C';
@@ -54,7 +57,10 @@ function App() {
       {/* <Register />
       <Login /> */}
       {/* <Parent/> */}
-      <Parent/>
+      {/* <Parent/> */}
+      {/* <A/> */}
+      {/* <Dom/> */}
+      <Refer/>
     </div>
   );
 }
