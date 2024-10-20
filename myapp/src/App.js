@@ -1,8 +1,16 @@
 import React from 'react'
-import Parent from './Components/FunctionalCom/Mis-Topics/Portals/Parent';
-import A from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/A';
-import Dom from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/Interact-with-dom/Dom';
-import Refer from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/To-refer-value/Refer';
+import Parent from './Components/ClassCom/Refs/Refs-Child-Com/Parent';
+// import Parent from './Components/ClassCom/Mis-Topics/Conditinal-Rendering/Parent';
+// import A from './Components/ClassCom/GlobalState/React-Redux/React-Components/A';
+// import Parent from './Components/ClassCom/Mis-Topics/Destructuring/Parent';
+// import A from './Components/ClassCom/GlobalState/Context-Api/A';
+// import Parent from './Components/ClassCom/Props & LocalState/Parent';
+// import Parent from './Components/FunctionalCom/Mis-Topics/Portals/Parent';
+// import A from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/A';
+// import Dom from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/Interact-with-dom/Dom';
+// import Refer from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/To-refer-value/Refer';
+// import Myclass from './Components/ClassCom/HelloClass';
+// import Parent from './Components/ClassCom/Props/Parent';
 // import A from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/A';
 // import B from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/B';
 // import C from './Components/FunctionalCom/Performance/Remove-DuplicateLogic/C';
@@ -32,7 +40,7 @@ import Refer from './Components/FunctionalCom/Mis-Topics/Refs/Normal-State-Ref/T
 
 function App() {
   return (
-    <div>
+    <div id='app'>
       {/* <h2>App component</h2> */}
       {/* <HelloClass />
       <HelloFun /> */}
@@ -60,7 +68,16 @@ function App() {
       {/* <Parent/> */}
       {/* <A/> */}
       {/* <Dom/> */}
-      <Refer/>
+      {/* <Refer/> */}
+      {/* {console.log(new Myclass().render())}
+      {new Myclass().render()} */}
+      {/* <Myclass/> */}
+      {/* <Parent/> */}
+      {/* <A/> */}
+      {/* <A/> */}
+      {/* <Parent/> */}
+      <Parent/>
+      
     </div>
   );
 }

@@ -39,7 +39,7 @@ function A() {
       <h2>A: Count: {count} </h2>
       <h2>A: Count: {count} </h2>
       <h2>A: Count: {count} </h2>
-      <B state={state} />
+      <B count={count} />
     </div>
   )
 }

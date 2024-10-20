@@ -1,14 +1,17 @@
+
 import React from 'react'
 
-class HelloClass extends React.Component{
-  constructor() {
-    super()
-  }
+class Myclass extends React.Component {
+  // constructor() {
+  //   console.log(this)
+  // }
   render() {
-     return <h1>Class component</h1>
-   }
+    return <h3>Hello class com</h3>
+  }
 }
 
-export default HelloClass
-// var obj = new HelloClass()
-// console.log(obj, typeof HelloClass)
+export default Myclass
+
+// var obj = new Myclass()
+// // console.log(obj, typeof myclass)
+// console.log(obj.render())
