@@ -1,5 +1,11 @@
 import React from 'react'
-import Parent from './Components/ClassCom/Refs/Refs-Child-Com/Parent';
+import Parent from './Components/ClassCom/Refs/Refs-Forward/Parent';
+import A from './Components/ClassCom/Remove-Duplicate-Logic/HOC/A';
+import B from './Components/ClassCom/Remove-Duplicate-Logic/HOC/B';
+import C from './Components/ClassCom/Remove-Duplicate-Logic/HOC/C';
+// import Parent from './Components/ClassCom/Refs/Refs-Child-Com/Parent';
+// import Parent from './Components/ClassCom/Refs/Refs-Dom-Element/Parent';
+// import Parent from './Components/ClassCom/Refs/Refs-Child-Com/Parent';
 // import Parent from './Components/ClassCom/Mis-Topics/Conditinal-Rendering/Parent';
 // import A from './Components/ClassCom/GlobalState/React-Redux/React-Components/A';
 // import Parent from './Components/ClassCom/Mis-Topics/Destructuring/Parent';
@@ -76,8 +82,13 @@ function App() {
       {/* <A/> */}
       {/* <A/> */}
       {/* <Parent/> */}
-      <Parent/>
-      
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      <A />
+      <B />
+      <C/>
     </div>
   );
 }

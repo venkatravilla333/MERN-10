@@ -5,18 +5,19 @@ export class Parent extends Component {
   constructor(props) {
     super(props)
     this.componentRef = React.createRef()
+   
   }
 
-  handleClick = () => {
-   this.componentRef.current.focusInput()
-   console.log( this.componentRef.current)
+  clickHandler = () => {
+    // this.componentRef.currrent.focus()
+    console.log(this.componentRef.current)
+    this.componentRef.current.focus()
   }
-  
   render() {
     return (
       <div>
         <Child ref={this.componentRef} />
-        <button onClick={this.handleClick }>click</button>
+        <button onClick={this.clickHandler }>click</button>
       </div>
     )
   }
