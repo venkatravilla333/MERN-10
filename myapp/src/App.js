@@ -1,8 +1,21 @@
 import React from 'react'
-import Parent from './Components/ClassCom/Refs/Refs-Forward/Parent';
-import A from './Components/ClassCom/Remove-Duplicate-Logic/HOC/A';
-import B from './Components/ClassCom/Remove-Duplicate-Logic/HOC/B';
-import C from './Components/ClassCom/Remove-Duplicate-Logic/HOC/C';
+import Container from './Components/FunctionalCom/Side-Effects/Cleanup-task/Container';
+// import Parent from './Components/FunctionalCom/Side-Effects/Runs-only-once/Parent';
+// import Container from './Components/ClassCom/Side-Effects/Cleanup-task/Container';
+// import Parent from './Components/ClassCom/Side-Effects/Runs-only-once/Parent';
+
+// import Parent from './Components/FunctionalCom/Side-Effects/Interact-with-dom/Parent';
+// import Parent from './Components/ClassCom/Side-Effects/Runs-Basedon-Condition/Parent';
+// import Parent from './Components/ClassCom/Life-Cycle-Methods/Updating/Parent';
+// import Parent from './Components/ClassCom/Life-Cycle-Methods/Mounting/Parent';
+// import A from './Components/ClassCom/Remove-Duplicate-Logic/Render-Props/A';
+// import B from './Components/ClassCom/Remove-Duplicate-Logic/Render-Props/B';
+// import C from './Components/ClassCom/Remove-Duplicate-Logic/Render-Props/C';
+// import Parent from './Components/ClassCom/Remove-Duplicate-Logic/Render-Props/Parent';
+// import Parent from './Components/ClassCom/Refs/Refs-Forward/Parent';
+// import A from './Components/ClassCom/Remove-Duplicate-Logic/HOC/A';
+// import B from './Components/ClassCom/Remove-Duplicate-Logic/HOC/B';
+// import C from './Components/ClassCom/Remove-Duplicate-Logic/HOC/C';
 // import Parent from './Components/ClassCom/Refs/Refs-Child-Com/Parent';
 // import Parent from './Components/ClassCom/Refs/Refs-Dom-Element/Parent';
 // import Parent from './Components/ClassCom/Refs/Refs-Child-Com/Parent';
@@ -86,9 +99,17 @@ function App() {
       {/* <Parent/> */}
       {/* <Parent/> */}
       {/* <Parent/> */}
-      <A />
+      {/* <A />
       <B />
-      <C/>
+      <C /> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Container/> */}
+      <Container/>
     </div>
   );
 }
