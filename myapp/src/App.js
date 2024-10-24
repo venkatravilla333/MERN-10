@@ -1,5 +1,7 @@
 import React from 'react'
 import Container from './Components/FunctionalCom/Side-Effects/Cleanup-task/Container';
+import Parent from './Components/ClassCom/Life-Cycle-Methods/ErrorHandling/Parent';
+import A from './Components/FunctionalCom/State/Async-Data/Local-State/SimpleData/useState-hook/A';
 // import Parent from './Components/FunctionalCom/Side-Effects/Runs-only-once/Parent';
 // import Container from './Components/ClassCom/Side-Effects/Cleanup-task/Container';
 // import Parent from './Components/ClassCom/Side-Effects/Runs-only-once/Parent';
@@ -109,7 +111,9 @@ function App() {
       {/* <Parent/> */}
       {/* <Parent/> */}
       {/* <Container/> */}
-      <Container/>
+      {/* <Container/> */}
+      {/* <Parent/> */}
+      <A/>
     </div>
   );
 }
