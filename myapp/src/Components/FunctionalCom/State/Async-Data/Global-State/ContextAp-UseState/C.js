@@ -3,7 +3,7 @@ import H from './H'
 import I from './I'
 
 function C(props) {
-  console.log(props)
+  // console.log(props)
   return (
     <div>
       <H />

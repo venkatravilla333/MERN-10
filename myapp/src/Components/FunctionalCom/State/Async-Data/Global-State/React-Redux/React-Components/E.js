@@ -1,14 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function E(props) {
-//  var [name, setName] = useState('sachin')
+function E() {
   return (
-    <div>
-      {/* <h2>E Name: {props.name}</h2>
-      <button onClick={()=>props.setName('kohli')}>update name</button> */}
-      <h2>E Name:</h2>
-      {/* <button onClick={()=>props.setName('kohli')}>update name</button> */}
-    </div>
+    <div>E</div>
   )
 }
 

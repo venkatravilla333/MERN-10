@@ -1,21 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function G(props) {
-  // var x = 100
-//  var [name, setName] = useState('sachin')
-
-  // function update(data) {
-  //   x = data
-  //   console.log(x)
-  // }
-
+function G() {
   return (
-    <div>
-      {/* <h2> G name: {props.name}</h2> */}
-      {/* <button onClick={()=>update(200)}>update</button> */}
-      {/* <button onClick={() => props.setName('kohli')}>update name</button> */}
-    </div>
-  );
+    <div>G</div>
+  )
 }
 
 export default G

@@ -1,14 +1,7 @@
-
-import { applyMiddleware, combineReducers, createStore } from 'redux'
-import { countReducer } from './Count/countReducer'
-import { cakeReducer } from './Cake/cakeReducer'
-import logger from 'redux-logger'
-
-var rootReducer = combineReducers({
-  countReducer: countReducer,
-  cakeReducer: cakeReducer
-})
+import { postReducer } from "./postReducer";
+import {applyMiddleware, createStore} from 'redux'
+import {thunk} from 'redux-thunk'
 
 
-export var store = createStore(rootReducer, applyMiddleware(logger))
-console.log(store)
+
+export let store = createStore(postReducer, applyMiddleware(thunk))

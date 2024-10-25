@@ -1,19 +1,27 @@
 import React, { useContext, useState } from 'react'
-import { colorContext, countContext } from './A';
+import {postsContext } from './A';
 
 function M(props) {
-  //  var [name, setName] = useState('sachin')
-//  var name = nameContext._currentValue
-  var {count, setCount } = useContext(countContext)
-  var color =  useContext(colorContext)
+
+  var {loading, posts, error} = useContext(postsContext)
   return (
     <div>
-      {/* <h2> M name: {props.name}</h2> */}
-      <h2> M count: {count} </h2>
-      <h2> M color: {color} </h2>
+      <h2>M com:</h2>
+      {
+        loading ? <h2>Loading</h2> : error ? <h2>{error}</h2> :
+          <div>
+            {
+              posts.map((post) => {
+                return <>
+                  <p>user id: {post.userId}</p>
+                  <p>title: {post.title}</p>
+                  <p>body: {post.body}</p>
+                </>
+              })
+            }
+          </div>
+     }
      
-      {/* <button onClick={() => props.setName('kohli')}>update name</button> */}
-      <button onClick={() => setCount(count+1)}>update count</button>
     </div>
   );
 }

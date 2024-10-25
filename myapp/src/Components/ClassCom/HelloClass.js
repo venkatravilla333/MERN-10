@@ -2,9 +2,13 @@
 import React from 'react'
 
 class Myclass extends React.Component {
-  // constructor() {
-  //   console.log(this)
-  // }
+  constructor() {
+    super()
+  
+    this.state = {
+       first
+    }
+  }
   render() {
     return <h3>Hello class com</h3>
   }

@@ -1,31 +1,36 @@
-import React, {useReducer} from 'react'
+import React, {useReducer, useEffect} from 'react'
 import B from './B'
 import C from './C'
 
-export var countContext = React.createContext()
+export var postsContext = React.createContext()
 
 function A() {
 
   var initialState = {
-    count: 0
+    loading: false,
+    posts: [],
+    error: ''
   }
 
-  var countReducer = (state, action) => {
+  var postReducer = (state=initialState, action) => {
     console.log(action.type)
     switch (action.type) {
-      case 'increase':
+      case 'FETCH_POST_REQUEST':
         return {
-          count: state.count + 1
+          ...state,
+          loading: true
         }
         break;
-      case 'decrease':
+      case 'FETCH_POST_SUCCESS':
         return {
-          count: state.count - 1
+          loading: false,
+          posts: action.payload,
         }
         break;
-      case 'reset':
+      case 'FETCH_POST_FAILURE':
         return {
-          count: state.count = 0
+          loading: false,
+          error: action.payload,
         }
         break;
       default:
@@ -34,16 +39,31 @@ function A() {
     
   }
 
-  var [state, dispatch] = useReducer(countReducer, initialState)
+  var [state, dispatch] = useReducer(postReducer, initialState)
+  console.log(state)
+
+  useEffect(() => {
+    dispatch({type: 'FETCH_POST_REQUEST'})
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => {
+      return res.json()
+    }).then((data) => {
+      console.log(data)
+      dispatch({type: 'FETCH_POST_SUCCESS', payload: data})
+    }).catch((err) => {
+      console.log(err)
+      dispatch({type: 'FETCH_POST_FAILURE', payload: err})
+    })
+  }, [])
   
   
 
   return (
     <div>
-      <countContext.Provider value={{state, dispatch}}>
+      <postsContext.Provider value={state}>
       <B />
       <C />
-      </countContext.Provider>
+      </postsContext.Provider>
       
     </div>
   )

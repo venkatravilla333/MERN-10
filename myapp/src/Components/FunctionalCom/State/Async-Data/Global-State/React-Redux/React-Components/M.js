@@ -1,29 +1,40 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { decreaseCount, increaseCount } from '../Redux/Count/countAction'
-import { buyCake } from '../Redux/Cake/cakeAction'
-// import { decreaseCount, increaseCount } from '../Redux/store'
-// import { store } from '../Redux/store'
+import React, {useEffect} from 'react'
+import { useDispatch, useSelector} from 'react-redux'
+import { fetchPosts } from '../Redux/actionCreators'
 
 function M() {
- var count =  useSelector((state) => {
-    return state.countReducer.count
-  })
- var cakes =  useSelector((state) => {
-    return state.cakeReducer.noOfCakes;
-  })
-  // var data = store.getState()
-  // console.log(data)
  var dispatch = useDispatch()
+
+  useEffect(() => {
+    console.log('effect')
+   dispatch(fetchPosts()) 
+  }, [])
+  
+ var state = useSelector((state) => {
+    return state
+ })
+  console.log(state)
+  console.log('render')
   return (
     <div>
-      <h2>M: count: {count}</h2>
-      <button onClick={()=>dispatch(increaseCount())}>increase</button>
-      <button onClick={()=>dispatch(decreaseCount())}>decrease</button>
-      <h2>M: cakes: {cakes}</h2>
-      <button onClick={()=>dispatch(buyCake())}>Buy cake</button>
+      <h2>M com:</h2>
+    
+      {state.loading ? <h2>Loading</h2> : state.error ? <h2>{state.error}</h2> :
+        <div>
+          {
+            state.posts.map((post) => {
+              return <div key={post.id}>
+                <p>Uer id: {post.userId}</p>
+                <p>Title: {post.title}</p>
+                <p>Body: {post.body}</p>
+              </div>
+            })
+          }
+        </div>}
+          
+      
     </div>
-  );
+  )
 }
 
 export default M

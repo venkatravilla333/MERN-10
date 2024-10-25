@@ -3,7 +3,7 @@ import J from './J'
 import K from './K'
 
 function I(props) {
-  console.log(props)
+  // console.log(props)
   return (
     <div>
       {/* <J name={props.name } setName={props.setName} /> */}

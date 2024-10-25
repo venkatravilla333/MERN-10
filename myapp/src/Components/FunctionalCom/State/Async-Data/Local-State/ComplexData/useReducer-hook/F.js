@@ -1,27 +1,33 @@
-import React, {useReducer} from 'react'
+import React, {useReducer, useEffect} from 'react'
 
 function F() {
 
   var initialState = {
-    count: 0
+    loading: false,
+    posts: [],
+    error: ''
   }
 
-  var countReducer = (state, action) => {
-    console.log(action.type)
+  var postReducer = (state = initialState, action) => {
+    // console.log(action.type)
     switch (action.type) {
-      case 'increase':
+      case 'FETCH_POST_REQUEST':
         return {
-          count: state.count + 1
+          ...state,
+          loading: true,
+          
         }
         break;
-      case 'decrease':
+      case 'FETCH_POST_SUCCESS':
         return {
-          count: state.count - 1
+          loading: false,
+          posts: action.payload
         }
         break;
-      case 'reset':
+      case 'FETCH_POST_FAILED':
         return {
-          count: state.count = 0
+          loading: false,
+          error: action.payload
         }
         break;
       default:
@@ -30,16 +36,45 @@ function F() {
     
   }
 
-  var [state, dispatch] = useReducer(countReducer, initialState)
+  var [state, dispatch] = useReducer(postReducer, initialState)
+
+  useEffect(() => {
+    dispatch({type: 'FETCH_POST_REQUEST'})
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((res) => {
+       return res.json()
+      }).then((data) => {
+        console.log(data)
+        dispatch({type: 'FETCH_POST_SUCCESS', payload: data})
+      }).catch((err) => {
+        console.log(err)
+         dispatch({type: 'FETCH_POST_FAILED', payload: err})
+    })
+  }, [])
   
   
 
   return (
     <div>
-      <h2>F: Count: {state.count}</h2>
-      <button onClick={()=>dispatch({type: 'increase'})}>increase</button>
+      <h2>Hello</h2>
+      {
+        state.loading ? <h3>Loading</h3> : state.error ? <h3>{state.error}</h3> :
+          <div>
+            {
+              state.posts.map((post) => {
+                return <React.Fragment key={post.id}>
+                  <p>Userid: {post.userId }</p>
+                  <p>Title: {post.title }</p>
+                  <p>Body: {post.body}</p>
+                </React.Fragment>
+              })
+            }
+          </div>
+      }
+      
+      {/* <button onClick={()=>dispatch({type: 'increase'})}>increase</button>
       <button onClick={()=>dispatch({type: 'decrease'})}>decrease</button>
-      <button onClick={()=>dispatch({type: 'reset'})}>reset</button>
+      <button onClick={()=>dispatch({type: 'reset'})}>reset</button> */}
       
     </div>
   )

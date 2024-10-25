@@ -36,10 +36,10 @@ function G() {
 
   return (
     <div>
-      <h2>G: Count: {state.count}</h2>
+      {/* <h2>G: Count: {state.count}</h2>
       <button onClick={()=>dispatch({type: 'increase'})}>increase</button>
       <button onClick={()=>dispatch({type: 'decrease'})}>decrease</button>
-      <button onClick={()=>dispatch({type: 'reset'})}>reset</button>
+      <button onClick={()=>dispatch({type: 'reset'})}>reset</button> */}
       
     </div>
   )

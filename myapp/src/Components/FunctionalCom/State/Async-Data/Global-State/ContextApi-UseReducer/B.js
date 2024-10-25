@@ -3,7 +3,7 @@ import D from './D'
 import E from './E'
 
 function B(props) {
-  console.log(props)
+  // console.log(props)
   return (
     <div>
       <D />

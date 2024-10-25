@@ -1,15 +1,30 @@
-import React, { useContext } from 'react'
-import { countContext } from './A'
+import React, {useContext} from 'react'
+
+import { postsContext } from './A'
 
 function M() {
-  var {state, dispatch} = useContext(countContext)
+  // console.log(props)
+  var state = useContext(postsContext)
+  console.log(state)
   return (
     <div>
-      <h2>M Count: {state.count}</h2>
-      <button onClick={()=>dispatch({type: 'increase'})}>increase</button>
-      <button onClick={()=>dispatch({type: 'decrease'})}>derease</button>
-      <button onClick={()=>dispatch({type: 'reset'})}>reset</button>
+      <h2>M com:</h2>
+      {state.loading ? <h2>Loading</h2> : state.error ? <h3>{state.error}</h3> :
+        <div>
+          {
+            state.posts.map((post) => {
+              return <React.Fragment key={post.id}>
+                <p>userid: {post.userId }</p>
+                <p>title: {post.title }</p>
+                <p>body: {post.body }</p>
+                
+              </React.Fragment>
+            })
+          }
+        </div>
+      }
       
+     
     </div>
   )
 }
