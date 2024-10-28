@@ -1,5 +1,13 @@
 import React from 'react'
-import A from './Components/FunctionalCom/State/Async-Data/Global-State/React-Tooolkit/React-Components/A';
+import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/withsame-props/reference/Parent';
+import Heavy from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/withsame-props/reference/Heavy';
+// import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/with-different-props/reference/Parent';
+// import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/with-different-props/pimitive/Parent';
+// import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/withsame-props/primitives/Parent';
+// import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/with-different-props/Parent';
+// import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/no-props/Parent';
+// import A from './Components/FunctionalCom/State/Async-Data/Global-State/React-Tooolkit/React-Components/A';
+// import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Initial-render/Parent';
 // import A from './Components/FunctionalCom/State/Async-Data/Global-State/React-Redux/React-Components/A';
 // import A from './Components/FunctionalCom/State/Async-Data/Global-State/ContextApi-UseReducer/A';
 // import A from './Components/FunctionalCom/State/Async-Data/Global-State/ContextAp-UseState/A';
@@ -121,7 +129,15 @@ function App() {
       {/* <A/> */}
       {/* <A/> */}
       {/* <A/> */}
-      <A/>
+      {/* <A/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      <Heavy/>
+      <Parent/>
     </div>
   );
 }
