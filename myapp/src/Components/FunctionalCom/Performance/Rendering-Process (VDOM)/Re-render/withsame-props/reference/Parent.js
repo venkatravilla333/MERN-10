@@ -6,13 +6,14 @@ function Parent() {
   const [count, setCount] = useState(0)
   const [num, setNum] = useState(0)
   
-  // var x = useMemo(() => {
-  //    return  {value: 100}
-  // }, [num]) 
-  var x = useCallback(() => {
-     return  ()=>{}
+  var x = useMemo(() => {
+     return  {value: 100}
   }, [num]) 
   console.log(x)
+  var y = useCallback(() => {
+     return  ()=>{}
+  }, [num]) 
+  console.log(y)
 //  var x = {value: 100}
   // var x = 'sachin'
   // var x = [100]

@@ -1,6 +1,9 @@
 import React from 'react'
-import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/withsame-props/reference/Parent';
-import Heavy from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/withsame-props/reference/Heavy';
+import Parent from './Components/FunctionalCom/Routing/Parent';
+// import Parent from './Components/ClassCom/VDom/Parent';
+// import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Doubts/Parent';
+// import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/withsame-props/reference/Parent';
+// import Heavy from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/withsame-props/reference/Heavy';
 // import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/with-different-props/reference/Parent';
 // import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/with-different-props/pimitive/Parent';
 // import Parent from './Components/FunctionalCom/Performance/Rendering-Process (VDOM)/Re-render/withsame-props/primitives/Parent';
@@ -136,7 +139,10 @@ function App() {
       {/* <Parent/> */}
       {/* <Parent/> */}
       {/* <Parent/> */}
-      <Heavy/>
+      {/* <Heavy/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Parent/> */}
       <Parent/>
     </div>
   );
