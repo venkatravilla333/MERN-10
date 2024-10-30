@@ -6,6 +6,8 @@ import About from './About'
 import Profile from './Profile'
 import Products from './Products'
 import Header from './Header'
+import ProductDetails from './ProductDetails'
+import PagenotFound from './PagenotFound'
 
 function Parent() {
   return (
@@ -13,11 +15,13 @@ function Parent() {
       <BrowserRouter>
       <Header/>
         <Routes>
-          <Route path='/home' element={<Home/>}/>
+          <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/profile' element={<Profile/>}/>
-          <Route path='/products' element={<Products/>}/>
-
+          <Route path='*' element={<PagenotFound/>}/>
+          <Route path='/products' element={<Products/>}>
+            <Route path=':id' element={<ProductDetails/>}/>
+          </Route>
         </Routes>
       </BrowserRouter>
       {/* <Home />
