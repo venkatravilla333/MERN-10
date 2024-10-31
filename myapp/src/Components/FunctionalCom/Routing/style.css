@@ -24,3 +24,11 @@ a{
   padding: 4px;
   
 }
+
+.footer{
+  background-color: black;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  margin-top: 420px;
+}

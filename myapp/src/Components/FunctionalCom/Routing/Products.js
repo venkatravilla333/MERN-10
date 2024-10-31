@@ -31,7 +31,7 @@ function Products() {
         {
           products.map((product) => {
             console.log(product)
-            return <li> <Link to = {`/products/${product.pId}`}>{product.pName}</Link> </li>
+            return <li> <Link state={'sachin'} to = {`/products/${product.pId}`}>{product.pName}</Link> </li>
           })
         }
         {/* <li> <a href="/products/1">Apple</a> </li>

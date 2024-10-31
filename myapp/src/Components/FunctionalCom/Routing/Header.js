@@ -8,7 +8,8 @@ function Header() {
       <ul>
         <li> <Link to="/">Home</Link> </li>
         <li> <Link to="/about">About</Link> </li>
-        <li> <Link to="/profile">Profile</Link> </li>
+        <li> <Link to="/heavy">Heavy Data</Link> </li>
+        <li> <Link to="/profile" state='kohli'>Profile</Link> </li>
         <li> <Link to="/products">Products</Link> </li> 
       </ul>
     </div>
